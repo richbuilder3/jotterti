@@ -10,12 +10,23 @@ function Controller() {
             __alloyId3.__transform = {};
             var __alloyId5 = Ti.UI.createTableViewRow({
                 title: "undefined" != typeof __alloyId3.__transform["title"] ? __alloyId3.__transform["title"] : __alloyId3.get("title"),
-                Date: "undefined" != typeof __alloyId3.__transform["date"] ? __alloyId3.__transform["date"] : __alloyId3.get("date"),
+                Date: "undefined" != typeof __alloyId3.__transform["Date"] ? __alloyId3.__transform["Date"] : __alloyId3.get("Date"),
                 content: "undefined" != typeof __alloyId3.__transform["content"] ? __alloyId3.__transform["content"] : __alloyId3.get("content")
             });
             rows.push(__alloyId5);
+            showJot ? __alloyId5.addEventListener("click", showJot) : __defers["__alloyId5!click!showJot"] = true;
         }
         $.__views.__alloyId2.setData(rows);
+    }
+    function showJot(event) {
+        var selectedJot = event.source;
+        var args = {
+            title: selectedJot.title,
+            Date: selectedJot.Date,
+            content: selectedJot.content
+        };
+        var jotview = Alloy.createController("jotsinfo", args).getView();
+        jotview.open();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -24,6 +35,7 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
+    var __defers = {};
     Alloy.Collections.instance("jots");
     $.__views.index = Ti.UI.createWindow({
         backgroundColor: "white",
@@ -49,6 +61,7 @@ function Controller() {
     myJots.add(jot);
     jot.save();
     $.index.open();
+    __defers["__alloyId5!click!showJot"] && __alloyId5.addEventListener("click", showJot);
     _.extend($, exports);
 }
 

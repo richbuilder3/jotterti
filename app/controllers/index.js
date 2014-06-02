@@ -10,7 +10,16 @@ var jot = Alloy.createModel('jots',{
 	content: 'whatever'
 });
 
-
+function showJot(event){
+	var selectedJot = event.source;
+	var args = {
+		title: selectedJot.title,
+		Date: selectedJot.Date,
+		content: selectedJot.content
+	};
+	var jotview = Alloy.createController("jotsinfo", args).getView();
+	jotview.open();
+}
 
 
 

@@ -2,7 +2,7 @@
 	<Collection src="jots">
 	<Window class="container">
 		<TableView dataCollection="jots">
-			<TableViewRow title="{title}" Date="{date}" content="{content}" onclick="showJot"></TableViewRow>
+			<TableViewRow title="{title}" Date="{Date}" content="{content}" onClick="showJot"></TableViewRow>
 		</TableView>
 	</Window>
 </Alloy>

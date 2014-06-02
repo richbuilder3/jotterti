@@ -2,7 +2,7 @@ exports.definition = {
 	config: {
 		columns: {
 		    "title": "string",
-		    "Date": "date",
+		    "Date": "text",
 		    "content": "text"
 		},
 		adapter: {
