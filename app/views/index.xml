@@ -1,5 +1,8 @@
 <Alloy>
+	<Collection src="jots">
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+		<TableView dataCollection="jots">
+			<TableViewRow title="{title}" Date="{date}" content="{content}" onclick="showJot"></TableViewRow>
+		</TableView>
 	</Window>
 </Alloy>
