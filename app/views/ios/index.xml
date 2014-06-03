@@ -1,0 +1,15 @@
+<Alloy>
+	<Collection src="jots">
+	<NavigationWindow id="navGroupWin">
+		<Window class="container">
+			<TableView dataCollection="jots">
+				<TableViewRow title="{title}" Date="{Date}" content="{content}" onClick="showJot"></TableViewRow>
+			</TableView>
+			<Toolbar bottom="0">
+				<Items>
+					<Button id="add" title="add jot" onClick="addJot"/>
+				</Items>
+			</Toolbar>
+		</Window>
+	</NavigationWindow>
+</Alloy>

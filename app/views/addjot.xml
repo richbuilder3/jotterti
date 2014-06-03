@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container">
+		<View layout="vertical">
+			<TextField id="titleInput" hintText="Title..."></TextField>
+			<TextField id="DateInput" hintText="Date..."></TextField>
+			<TextField id="contentInput" hintText="Note Info..."></TextField>
+			<Button id="insertJotButton" onClick="addJot">Add Jot</Button>
+		</View>
+	</Window>
+</Alloy>

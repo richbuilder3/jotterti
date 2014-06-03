@@ -7,22 +7,35 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.jotsinfo = Ti.UI.createWindow({
-        backgroundColor: "white",
+        backgroundColor: "green",
         id: "jotsinfo"
     });
     $.__views.jotsinfo && $.addTopLevelView($.__views.jotsinfo);
+    $.__views.__alloyId13 = Ti.UI.createView({
+        layout: "vertical",
+        id: "__alloyId13"
+    });
+    $.__views.jotsinfo.add($.__views.__alloyId13);
     $.__views.titleLabel = Ti.UI.createLabel({
+        font: {
+            fontSie: "30"
+        },
+        left: "10",
         id: "titleLabel"
     });
-    $.__views.jotsinfo.add($.__views.titleLabel);
+    $.__views.__alloyId13.add($.__views.titleLabel);
     $.__views.DateLabel = Ti.UI.createLabel({
+        font: {
+            fontSize: "20"
+        },
+        left: "10",
         id: "DateLabel"
     });
-    $.__views.jotsinfo.add($.__views.DateLabel);
+    $.__views.__alloyId13.add($.__views.DateLabel);
     $.__views.contentLabel = Ti.UI.createLabel({
         id: "contentLabel"
     });
-    $.__views.jotsinfo.add($.__views.contentLabel);
+    $.__views.__alloyId13.add($.__views.contentLabel);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};

@@ -2,13 +2,15 @@
     // alert($.label.text);
 // }
 
-var myJots = Alloy.Collections.jots;
+
 
 var jot = Alloy.createModel('jots',{
 	title: '1st note',
 	Date: '6/2/14',
 	content: 'whatever'
 });
+
+var myJots = Alloy.Collections.jots;
 
 function showJot(event){
 	var selectedJot = event.source;
@@ -18,13 +20,18 @@ function showJot(event){
 		content: selectedJot.content
 	};
 	var jotview = Alloy.createController("jotsinfo", args).getView();
-	jotview.open();
+	{$.navGroupWin.openWindow(jotview);}
 }
 
-
+function addJot(){ 
+	var myAddJot =
+ Alloy.createController("addjot", {}).getView(); if (OS_IOS)
+ {$.navGroupWin.openWindow(myAddJot);} if (OS_ANDROID) {myAddJot.open();
+ }}
 
 
 myJots.add(jot);
 jot.save();
 
-$.index.open();
+$.navGroupWin.open();
+// $.index.open();

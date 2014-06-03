@@ -1,7 +1,9 @@
 <Alloy>
 	<Window class="container">
-		<Label id="titleLabel"></Label>
-		<Label id="DateLabel"></Label>
-		<Label id="contentLabel"></Label>
+		<View layout='vertical'>
+			<Label id="titleLabel"></Label>
+			<Label id="DateLabel"></Label>
+			<Label id="contentLabel"></Label>
+		</View>
 	</Window>
 </Alloy>

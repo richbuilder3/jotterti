@@ -1,4 +1,17 @@
 
 ".container" : {
-  backgroundColor:'white'
+  backgroundColor:'green'
+}
+
+"#titleLabel": {
+	font: {
+		fontSie: '30'
+	},
+	left: '10'
+},
+"#DateLabel":{
+	font: {
+		fontSize: '20'
+	},
+	left: '10'
 }
